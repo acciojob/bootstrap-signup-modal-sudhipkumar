@@ -3,11 +3,96 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <title>Modal</title>
 	</head>
 	<body>
-	
+		<article>
+      <div class="container my-5">
+        <button
+          type="button"
+          class="btn btn-danger"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          Sign Up
+        </button>
+      </div>
+
+      <!-- Modal Form-->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header d-flex flex-column">
+              <h4 class="modal-title align-self-start" id="staticBackdropLabel">
+                Create Account
+              </h4>
+              <button
+                type="button"
+                class="btn-close align-self-end mt-2"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="modal-body">
+              <form action="" method="post">
+                <div class="mb-3">
+                  <label class="form-label" for="email">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter Email"
+                    id="email"
+                    required
+                  />
+                  <div class="form-text">Your information is safe with us.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label" for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Enter Password"
+                    id="password"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label" for="confirm-password"
+                    >Confirm Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Confirm Password"
+                    id="confirm-password"
+                    required
+                  />
+                </div>
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
 	</body>
 </html>
